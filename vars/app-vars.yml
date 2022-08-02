@@ -1,0 +1,7 @@
+---
+critools_archive: '{{ critools_app }}-v{{ critools_ver }}-{{ critools_platform }}.{{ critools_archive_type | default("tar.gz") }}'
+critools_tmp_archive: '{{ critools_tmp_dir | default("/tmp") }}/{{ critools_archive }}'
+critools_url: '{{ critools_mirror }}/v{{ critools_ver }}/{{ critools_archive }}'
+critools_checksum: '{{ critools_checksums[critools_ver][critools_app][critools_platform] }}'
+critools_install_exe: '{{ critools_install_dir }}/{{ critools_app }}'
+critools_link: '{{ critools_parent_install_dir }}/bin/{{ critools_app }}'

@@ -1,0 +1,42 @@
+---
+- name: resolving vars for {{ critools_app }}:{{ critools_ver }}
+  include_vars:
+    file: app-vars.yml
+- name: looking install at {{ critools_install_exe }}
+  become: true
+  stat:
+    path: '{{ critools_install_exe }}'
+  changed_when: false
+  register: critools_binary
+- when: not critools_binary.stat.exists
+  block:
+    - name: downloading {{ critools_url }} to {{ critools_tmp_archive }}
+      become: true
+      become_user: root
+      get_url:
+        url: '{{ critools_url }}'
+        dest: '{{ critools_tmp_archive }}'
+        mode: 0644
+        checksum: '{{ critools_checksum }}'
+    - name: unarchiving {{ critools_tmp_archive }}
+      become: true
+      become_user: root
+      unarchive:
+        remote_src: true
+        src: '{{ critools_tmp_archive }}'
+        dest: '{{ critools_install_dir }}'
+        creates: '{{ critools_install_exe }}'
+  always:
+    - name: rm {{ critools_tmp_archive }}
+      become: true
+      become_user: root
+      file:
+        path: '{{ critools_tmp_archive }}'
+        state: absent
+- name: linking {{ critools_link }} to {{ critools_install_exe }}
+  become: true
+  become_user: root
+  file:
+    src: '{{ critools_install_exe }}'
+    dest: '{{ critools_link }}'
+    state: link

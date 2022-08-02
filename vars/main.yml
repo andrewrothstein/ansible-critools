@@ -1,0 +1,4 @@
+---
+# vars file for critools
+critools_platform: '{{ critools_os }}-{{ critools_arch }}'
+critools_install_dir: '{{ critools_parent_install_dir }}/critools-{{ critools_ver }}-{{ critools_platform }}'
