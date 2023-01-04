@@ -1,4 +1,6 @@
 ---
 # vars file for critools
+critools_os: '{{ ansible_system | lower }}'
+critools_arch: '{{ critools_arch_map[ansible_architecture] }}'
 critools_platform: '{{ critools_os }}-{{ critools_arch }}'
 critools_install_dir: '{{ critools_parent_install_dir }}/critools-{{ critools_ver }}-{{ critools_platform }}'

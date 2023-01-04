@@ -1,9 +1,15 @@
 ---
 # defaults file for critools
 critools_mirror: https://github.com/kubernetes-sigs/cri-tools/releases/download
-critools_ver: 1.24.2
-critools_os: linux
-critools_arch: amd64
+critools_ver: 1.26.0
+critools_arch_map:
+  386: 386
+  aarch64: arm64
+  arm64: arm64
+  x86_64: amd64
+  mips64le: mips64le
+  ppc64le: ppc64le
+  s390x: s390x
 critools_parent_install_dir: /usr/local
 critools_apps:
   - crictl
@@ -164,3 +170,40 @@ critools_checksums:
       windows-386: sha256:6d60e20299daff0c460d3048fb9582786787b5d786bc3bb42e08f7c6306da083
       # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.24.2/critest-v1.24.2-windows-amd64.tar.gz.sha256
       windows-amd64: sha256:761eb4b0f1117627bd726ab83362c898fd44cb242ab3c4e1e1fb1bb23de9e3cf
+  '1.26.0':
+    crictl:
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.26.0/crictl-v1.26.0-darwin-amd64.tar.gz.sha256
+      darwin-amd64: sha256:80c8948bdb0a97f6be6ed22967a50301980cc4aee5186f1b4ce953d4356c63ab
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.26.0/crictl-v1.26.0-linux-386.tar.gz.sha256
+      linux-386: sha256:8418d3a88f53aebaa357d5ad6110b21bb8a405636c4bce49639745a92ad40b1f
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.26.0/crictl-v1.26.0-linux-amd64.tar.gz.sha256
+      linux-amd64: sha256:cda5e2143bf19f6b548110ffba0fe3565e03e8743fadd625fee3d62fc4134eed
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.26.0/crictl-v1.26.0-linux-arm.tar.gz.sha256
+      linux-arm: sha256:88891ee29eab097ab1ed88d55094e7bf464f3347bc9f056140e45efeddd15b33
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.26.0/crictl-v1.26.0-linux-arm64.tar.gz.sha256
+      linux-arm64: sha256:b632ca705a98edc8ad7806f4279feaff956ac83aa109bba8a85ed81e6b900599
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.26.0/crictl-v1.26.0-linux-mips64le.tar.gz.sha256
+      linux-mips64le: sha256:78b6012476e23eda247370ea8e4072484cfd2d8af52c1eccbeb6d76669e0ce0b
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.26.0/crictl-v1.26.0-linux-ppc64le.tar.gz.sha256
+      linux-ppc64le: sha256:5538c88b8ccde419e6158ab9c06dfcca1fa0abecf33d0a75b2d22ceddd283f0d
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.26.0/crictl-v1.26.0-linux-s390x.tar.gz.sha256
+      linux-s390x: sha256:049390a562ee4ee62ab015d4afd2616126b6a60ea640e33ae9360a080e4c2243
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.26.0/crictl-v1.26.0-windows-386.tar.gz.sha256
+      windows-386: sha256:1563964a7e9d5d00585595ad40e51fe0b92a012d9b317ce65f75d026a9d2c454
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.26.0/crictl-v1.26.0-windows-amd64.tar.gz.sha256
+      windows-amd64: sha256:a86b7da799cda85dc75a9f6e30024cb0412c967689ae09a6e66d0ebeafa26d7c
+    critest:
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.26.0/critest-v1.26.0-darwin-amd64.tar.gz.sha256
+      darwin-amd64: sha256:4e1e44e7b5e09d6fec7fde672b75024b9f2f2da3a1cf54ab90f979061e6f64d6
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.26.0/critest-v1.26.0-linux-386.tar.gz.sha256
+      linux-386: sha256:7a45cef72a91ccd9767b2bac3e7cb6cc662ed620cfa1407e3aeafd7e4a6aa15a
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.26.0/critest-v1.26.0-linux-amd64.tar.gz.sha256
+      linux-amd64: sha256:5059a8a1768142f8bc4edf8cca9cacbe38cfb60ee84279c980df06f11b9c67b9
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.26.0/critest-v1.26.0-linux-arm.tar.gz.sha256
+      linux-arm: sha256:55fd6fbca87b99b00be520cd155dc1e197634ea5c1041b53fd0872deca6ca1fb
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.26.0/critest-v1.26.0-linux-arm64.tar.gz.sha256
+      linux-arm64: sha256:5e89df66d65c0a3c8a844ad90dbabec5f3bafddf9f18e56fbb8b27211e3f9f6c
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.26.0/critest-v1.26.0-windows-386.tar.gz.sha256
+      windows-386: sha256:da3a8cfb4e3353041a2373cc14f111aabe4d721f2213798c1a382fcebc00d12e
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.26.0/critest-v1.26.0-windows-amd64.tar.gz.sha256
+      windows-amd64: sha256:932d7ca5e0b57005f4e38aa234c19408c048ca3f0300d489cb149327a10c71d3
