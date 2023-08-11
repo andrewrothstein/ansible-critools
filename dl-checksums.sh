@@ -55,4 +55,4 @@ dl_ver() {
     dl_critest $ver
 }
 
-dl_ver ${1:-1.26.0}
+dl_ver ${1:-1.27.1}

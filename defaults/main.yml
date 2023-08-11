@@ -1,7 +1,7 @@
 ---
 # defaults file for critools
 critools_mirror: https://github.com/kubernetes-sigs/cri-tools/releases/download
-critools_ver: 1.26.0
+critools_ver: 1.27.1
 critools_arch_map:
   386: 386
   aarch64: arm64
@@ -207,3 +207,40 @@ critools_checksums:
       windows-386: sha256:da3a8cfb4e3353041a2373cc14f111aabe4d721f2213798c1a382fcebc00d12e
       # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.26.0/critest-v1.26.0-windows-amd64.tar.gz.sha256
       windows-amd64: sha256:932d7ca5e0b57005f4e38aa234c19408c048ca3f0300d489cb149327a10c71d3
+  '1.27.1':
+    crictl:
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.27.1/crictl-v1.27.1-darwin-amd64.tar.gz.sha256
+      darwin-amd64: sha256:ba8878dad8bc94df4947368cf33979e121c60f2f5bde72b4e132f56abd4bfa02
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.27.1/crictl-v1.27.1-linux-386.tar.gz.sha256
+      linux-386: sha256:6524ee7d15acec9879c27f1836a36719e42e35c517eaedbfaee8da9e8041a61e
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.27.1/crictl-v1.27.1-linux-amd64.tar.gz.sha256
+      linux-amd64: sha256:b70e8d7bde8ec6ab77c737b6c69be8cb518ce446365734c6db95f15c74a93ce8
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.27.1/crictl-v1.27.1-linux-arm.tar.gz.sha256
+      linux-arm: sha256:ec24fb7e4d45b7f3f3df254b22333839f9bdbde585187a51c93d695abefbf147
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.27.1/crictl-v1.27.1-linux-arm64.tar.gz.sha256
+      linux-arm64: sha256:322bf64d12f9e5cd9540987d47446bf9b0545ceb1900ef93376418083ad88241
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.27.1/crictl-v1.27.1-linux-mips64le.tar.gz.sha256
+      linux-mips64le: sha256:eeed41e56bb1552be97f7fec6a923d7861f76026209352d3ab6b3bc0ea4ba899
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.27.1/crictl-v1.27.1-linux-ppc64le.tar.gz.sha256
+      linux-ppc64le: sha256:c408bb5e797bf02215acf9604c43007bd09cf69353cefa8f20f2c16ab1728a85
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.27.1/crictl-v1.27.1-linux-s390x.tar.gz.sha256
+      linux-s390x: sha256:1b4a79d6bc43c6983881f42c7850a8ab76f072ab2e0f9a843511bc27e933c521
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.27.1/crictl-v1.27.1-windows-386.tar.gz.sha256
+      windows-386: sha256:57de65b2bf67b95ae7decafd714a96d68953458ec556a07c7f126c79a09b3a9b
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.27.1/crictl-v1.27.1-windows-amd64.tar.gz.sha256
+      windows-amd64: sha256:f0f3d1279c35eda02a32d0ae7c9ca9e6544883456425a2ed98439fc7316adeb3
+    critest:
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.27.1/critest-v1.27.1-darwin-amd64.tar.gz.sha256
+      darwin-amd64: sha256:f18aa0e35d899174d21290286f53f2f0cc0124678c0b737e66170719866ead2b
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.27.1/critest-v1.27.1-linux-386.tar.gz.sha256
+      linux-386: sha256:91e1f4a00b3065e7c92343ae25ebd78a0cea68b3ff9ee8f6710bc6f823bec2b2
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.27.1/critest-v1.27.1-linux-amd64.tar.gz.sha256
+      linux-amd64: sha256:7e833473359ccf126433ed5143e92bb8cf6d54870fc7b4be59cb31bcf49401a7
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.27.1/critest-v1.27.1-linux-arm.tar.gz.sha256
+      linux-arm: sha256:f4c1fc75c149baf16315c4571c19c68efd84d2868130d30407bbe638f4019577
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.27.1/critest-v1.27.1-linux-arm64.tar.gz.sha256
+      linux-arm64: sha256:43529df1d2edfb60ffd759f157895393bb0d3aa9827bf75c903074c577262dd3
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.27.1/critest-v1.27.1-windows-386.tar.gz.sha256
+      windows-386: sha256:6f89325a932d52113d6e87cb45398a44a4ecdc8878dae68d33981e8293ff703c
+      # https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.27.1/critest-v1.27.1-windows-amd64.tar.gz.sha256
+      windows-amd64: sha256:000decc1eae48130037c01f99cf717398bdf00b4d6742b9144b5d924d1fae58e
