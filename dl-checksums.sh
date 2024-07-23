@@ -25,7 +25,6 @@ dl_crictl() {
     dl $app $ver darwin amd64
     dl $app $ver linux 386
     dl $app $ver linux amd64
-    dl $app $ver linux arm
     dl $app $ver linux arm64
     dl $app $ver linux mips64le
     dl $app $ver linux ppc64le
@@ -40,7 +39,6 @@ dl_critest() {
     dl $app $ver darwin amd64
     dl $app $ver linux 386
     dl $app $ver linux amd64
-    dl $app $ver linux arm
     dl $app $ver linux arm64
     dl $app $ver windows 386
     dl $app $ver windows amd64
@@ -55,4 +53,4 @@ dl_ver() {
     dl_critest $ver
 }
 
-dl_ver ${1:-1.27.1}
+dl_ver ${1:-1.30.1}
